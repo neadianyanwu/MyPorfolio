@@ -47,11 +47,37 @@
                         
 
                         <div class="tab-titles">
-                            <p class="tab-links active-links">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
                         
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>React</span><br>React</li>
+                                <li><span>JavaScript</span><br>JavaScript</li>
+                                <li><span>HTML</span><br>HTML</li>
+                                <li><span>CSS</span><br>CSS</li>
+                                <li><span>Tailwind Css</span><br>Tailwind CSS</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023 - Current</span><br> Front-end Developer Tutor(Volunteer) at BuildHubb</li>
+                                <li><span>2021 - Current</span><br>Operations Manager at Cedarr Labs</li>
+                                <li><span>2021 - Current</span><br>Creative Director at Muse</li>
+                                <li><span>2022 - 2023</span><br>Internship at Basicons</li>
+                                <li><span>2021 - 2022</span><br>Information Technology Support Specialist at St Pauls School</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>Information Management Technology at Federal University of Technology, Owerri</li>
+                                <li><span>2018</span><br>Web Design & Development at NHS</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,5 +111,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
