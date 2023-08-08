@@ -112,6 +112,22 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Section: Js -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classListy.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents) {
+                tabcontent.classListy.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+
+    </script>
 </body>
 </html>
