@@ -145,9 +145,14 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
-.tab-titles {
+/* .tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .tab-links {
@@ -174,15 +179,62 @@ nav ul li a:hover::after {
 }
 
 .tab-contents {
-    list-style: none;
-    margin: 10px 0;
+    margin: 10px;
 }
 
-.tab-contents ul span {
+.tab-contents .tab-list ul li {
     color: #123d42;
-    font-size: 14px;
-    font-weight: 300;
-    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+} */
+
+/* Section: Service */
+.service-contents {
+    padding: 30px 0;
+}
+
+.service-contents h1 {
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    color: #7fdbe3;
+    font-weight: 500;
+}
+
+.card {
+    display: flex;
+    float: left;
+    width: 30%;
+    margin: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 38vh;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-content h2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: #07a27a;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-content p {
+    text-align: inherit;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 /* Section: Media Queries */
@@ -201,4 +253,33 @@ nav ul li a:hover::after {
         margin: 15px auto;
         margin-left: 10px;
     }
+  
+    .row {
+        flex-direction: row;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 img {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 30px;
+        
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
 }
