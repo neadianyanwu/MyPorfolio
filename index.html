@@ -47,7 +47,7 @@
                         
 
                         <div class="tab-titles">
-                            <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
                             <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
@@ -90,7 +90,7 @@
             <div class="card-container">
              <div class="card">
                 <div class="card-content">
-                    <h2>Design & Development</h2>
+                    <h2>Web Design & Development</h2>
                     <p>I enjoy turning visual ideas into functional web interfaces, especially when Javascript, HTML, and CSS are involved.</p>
                 </div>
              </div>
@@ -119,13 +119,13 @@
 
         function opentab(tabname) {
             for(tablink of tablinks) {
-                tablink.classListy.remove("active-link");
+                tablink.classList.remove("active-link");
             }
-
             for(tabcontent of tabcontents) {
-                tabcontent.classListy.remove("active-tab");
+                tabcontent.classList.remove("active-tab");
             }
             event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
 
     </script>

@@ -175,7 +175,7 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.tab-links.active-links::after {
+.tab-links.active-link::after {
     width: 50%;
 }
 
@@ -221,6 +221,8 @@ nav ul li a:hover::after {
     height: 38vh;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .card-content h2 {
     text-align: center;
