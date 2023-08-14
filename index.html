@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Section: Header -->
     <div id="header">
         <div class="container">
             <nav>
@@ -27,88 +28,126 @@
                 <button class="btn">Get in Touch</button>
             </div>
         </div>
+    </div>
 
-        <!-- Section: About -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="img/oma.jpeg">
+    <!-- Section: About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/oma.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="title">About Me.</h1>
+                    <p>I am only six months into my programming career, 
+                        therefore I am still in the early stages. 
+                        Despite this, I am quietly confident, innately interested, 
+                        and constantly aiming to hone my skills by solving one design problem at a time.
+                        consulted for startups, served as a volunteer product manager, creative director, and operations manager to develop products for both consumer and commercial purposes.
+                    </p>
+                    <button class="btn">Resume</button>
+                    
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="title">About Me.</h1>
-                        <p>I am only six months into my programming career, 
-                            therefore I am still in the early stages. 
-                            Despite this, I am quietly confident, innately interested, 
-                            and constantly aiming to hone my skills by solving one design problem at a time.
-                            consulted for startups, served as a volunteer product manager, creative director, and operations manager to develop products for both consumer and commercial purposes.
-                        </p>
-                        <button class="btn">Resume</button>
-                        
+                    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>React</span><br>React</li>
+                            <li><span>JavaScript</span><br>JavaScript</li>
+                            <li><span>HTML</span><br>HTML</li>
+                            <li><span>CSS</span><br>CSS</li>
+                            <li><span>Tailwind Css</span><br>Tailwind CSS</li>
+                        </ul>
+                    </div>
 
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>React</span><br>React</li>
-                                <li><span>JavaScript</span><br>JavaScript</li>
-                                <li><span>HTML</span><br>HTML</li>
-                                <li><span>CSS</span><br>CSS</li>
-                                <li><span>Tailwind Css</span><br>Tailwind CSS</li>
-                            </ul>
-                        </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br> Front-end Developer Tutor(Volunteer) at BuildHubb</li>
+                            <li><span>2021 - Current</span><br>Operations Manager at Cedarr Labs</li>
+                            <li><span>2021 - Current</span><br>Creative Director at Muse</li>
+                            <li><span>2022 - 2023</span><br>Internship at Basicons</li>
+                            <li><span>2021 - 2022</span><br>Information Technology Support Specialist at St Pauls School</li>
+                        </ul>
+                    </div>
 
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2023 - Current</span><br> Front-end Developer Tutor(Volunteer) at BuildHubb</li>
-                                <li><span>2021 - Current</span><br>Operations Manager at Cedarr Labs</li>
-                                <li><span>2021 - Current</span><br>Creative Director at Muse</li>
-                                <li><span>2022 - 2023</span><br>Internship at Basicons</li>
-                                <li><span>2021 - 2022</span><br>Information Technology Support Specialist at St Pauls School</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2020</span><br>Information Management Technology at Federal University of Technology, Owerri</li>
-                                <li><span>2018</span><br>Web Design & Development at NHS</li>
-                            </ul>
-                        </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Information Management Technology at Federal University of Technology, Owerri</li>
+                            <li><span>2018</span><br>Web Design & Development at NHS</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Section: Services -->
-        
-        <div class="service-contents">
-            <h1>Services</h1>
-            <div class="card-container">
-             <div class="card">
-                <div class="card-content">
-                    <h2>Web Design & Development</h2>
-                    <p>I enjoy turning visual ideas into functional web interfaces, especially when Javascript, HTML, and CSS are involved.</p>
-                </div>
-             </div>
-
-             <div class="card">
-                <div class="card-content">
-                    <h2>Collaboration</h2>
-                    <p>Teaming up with other developers makes the work easier, more efficient, and faster to complete, and it allows me to learn from my colleagues.</p>
-                </div>
-             </div>
-
-             <div class="card">
-                <div class="card-content">
-                    <h2>Mentor</h2>
-                    <p>As a result of my love for helping others, I have helped at least 20 others learn the fundamentals of programming and technology.</p>
-                </div>
-             </div>
+    <!-- Section: Services -->
+    <div class="service-contents">
+        <h1>Services</h1>
+        <div class="card-container">
+         <div class="card">
+            <i class='bx bx-code-alt'></i>
+            <div class="card-content">
+                <h2>Web Design</h2>
+                <p>I enjoy turning visual ideas into functional web interfaces, especially when Javascript, HTML, and CSS are involved.</p>
             </div>
+         </div>
+
+         <div class="card">
+            <i class='bx bxl-microsoft-teams'></i>
+            <div class="card-content">
+                <h2>Collaboration</h2>
+                <p>Teaming up with other developers makes the work easier, more efficient, and faster to complete, and it allows me to learn from my colleagues.</p>
+            </div>
+         </div>
+
+         <div class="card">
+            <i class='bx bx-book'></i>
+            <div class="card-content">
+                <h2>Mentor</h2>
+                <p>As a result of my love for helping others, I have helped at least 20 others learn the fundamentals of programming and technology.</p>
+            </div>
+         </div>
+        </div>
+    </div>
+
+    <!-- Section: Portfolio -->
+    <div class="portfolio">
+        <div class="container">
+            <h1>My Work</h1>
+            <div class="work-list">
+                <div class="work-content">
+                    <img src="img/rube.png">
+                    <div class="card-info">
+                        <h3 class="card-title">e-Commerce</h3>
+                        <p class="card-text">This platform facilitates purchasing and selling by connecting you with merchants world wide.</p>
+                        <a href="#">Click Me</a>
+                    </div>
+                </div>
+
+                <div class="work-content">
+                    <img src="img/rube.png">
+                    <div class="card-info">
+                        <h3 class="card-title">Icon Library</h3>
+                        <p class="card-text">This website contains a collection of icons that users can use for a variety of applications.</p>
+                        <a href="#">Click Me</a>
+                    </div>
+                </div>
+
+                <div class="work-content">
+                    <img src="img/rube.png">
+                    <div class="card-info">
+                        <h3 class="card-title">ChatBot</h3>
+                        <p class="card-text"p>It functions as a conversational virtual assistant, interpreting and responding to user, inquiries etc.</p>
+                        <a href="#">Click Me</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn1">See More</a>
         </div>
     </div>
 

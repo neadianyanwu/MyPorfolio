@@ -105,6 +105,7 @@ nav ul li a:hover::after {
     background: #07a27a;
     cursor: pointer;
     text-transform: capitalize;
+    transition: 0.5s ease-in-out;
 }
 
 .btn:hover {
@@ -200,6 +201,7 @@ nav ul li a:hover::after {
 /* Section: Service */
 .service-contents {
     padding: 30px 0;
+    text-align: center;
 }
 
 .service-contents h1 {
@@ -208,6 +210,13 @@ nav ul li a:hover::after {
     align-items: center;
     color: #7fdbe3;
     font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -218,11 +227,23 @@ nav ul li a:hover::after {
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    height: 38vh;
+    height:auto;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.5s, transform 0.5s;
 }
 
+.card:hover {
+    background: #695a70;
+    transform: translateY(-10px);
+}
 
+.card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #d0d0d0;
+}
 
 .card-content h2 {
     text-align: center;
@@ -246,6 +267,119 @@ nav ul li a:hover::after {
     font-weight: 400;
     align-items: center;
     padding: 10px 20px;
+}
+
+/* Section: My Work */
+.portfolio {
+  display: flex;
+  width: 100%;
+  /* height: 100%; */
+  background: #adb3c1;
+}
+
+.portfolio .container h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.work-content {
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    position: relative;
+}
+
+.work-content img {
+    width: 100%;
+    padding: 10px auto;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid #adb3c1;
+}
+
+.card-info {
+    width: 100%;
+    height: 100%;
+    /* margin-top: 30px; */
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #695a705a;
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    bottom: 20px;
+}
+
+.card-text {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    bottom: 20px;
+}
+
+.card-info a {
+    color: #7fdbe3;
+    background: #adb3c1;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card-info a:hover {
+    background: #123d42;
+    color: #adb3c1;
+}
+
+.work-content:hover .card-info {
+    right: 0;
+}
+
+.btn1 {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #07a27a;
+    padding: 14px 30px;
+    border-radius: 6px;
+    color: #123d42;
+    text-decoration: none;
+    background: #695a70;
+    transition: 0.5;
+}
+
+.btn1:hover {
+    background: #ddd;
+    color: #adb3c1;
 }
 
 /* Section: Media Queries */
@@ -293,4 +427,7 @@ nav ul li a:hover::after {
         margin: 20px 0;
     }
 
+    .portfolio {
+        margin-top: 20px;
+    }
 }
