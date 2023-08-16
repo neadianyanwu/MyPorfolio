@@ -294,7 +294,6 @@ nav ul li a:hover::after {
 .work-content {
     width: 100%;
     height: 100%;
-    height: 100%;
     overflow: hidden;
     justify-content: space-between;
     position: relative;
@@ -364,12 +363,12 @@ nav ul li a:hover::after {
     right: 0;
 }
 
-.btn1 {
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #07a27a;
-    padding: 14px 30px;
+    padding: 10px 20px;
     border-radius: 6px;
     color: #123d42;
     text-decoration: none;
@@ -382,7 +381,92 @@ nav ul li a:hover::after {
     color: #adb3c1;
 }
 
+.main-contact form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+/* Section: Contact */
+.side-contact {
+    flex-basis: 35%;
+}
+
+.main-contact {
+    flex-basis: 60%;
+}
+
+.side-contact p {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-contact p i {
+    color: #07a27a;
+    margin-right: 15px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    font-weight: 300;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s ease-in;
+}
+
+.social-icons a:hover {
+    color: #07a27a;
+    transform: translateY(-5px);
+}
+
+.btn.btn1 {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 30px;
+
+}
+
+form btn2 {
+    padding: 14px 60px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #1a292b9e;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
 /* Section: Media Queries */
+
+nav .bx {
+    display: none;
+}
 @media screen and (max-width: 760px) {
     nav {
         flex-direction: row;
@@ -394,9 +478,25 @@ nav ul li a:hover::after {
         font-size: 30px;
     }
 
+    nav .bx {
+        display: block;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    nav ul {
+        background: #07a27a;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
     nav ul li {
-        margin: 15px auto;
-        margin-left: 10px;
+        display: block;
+        margin: ;
     }
   
     .row {
@@ -423,11 +523,12 @@ nav ul li a:hover::after {
     }
 
     .card {
-        width: 100%;
+        width: 80%;
         margin: 20px 0;
     }
 
     .portfolio {
         margin-top: 20px;
     }
+
 }
