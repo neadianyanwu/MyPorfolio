@@ -168,12 +168,13 @@
                     <a href="img/IjeomaCV(1).pdf" download class="btn btn1">Download CV</a>
                 </div>
                 <div class="main-contact">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Message" rows="5" placeholder="Message..."></textarea>
                         <button type="submit" class="btn btn1">Submit</button>
                     </form>
+                    <span id="messages"></span>
                 </div>
             </div>
         </div>
@@ -211,5 +212,25 @@
             menubar.style.right = "-200px";
         }
     </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRDWUYa22un-a0MdEcMw6tEuLfqpldCe6eaH7IJVMo9xBovoLV3LzZiYLJ5e0sb0uH/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const messages = document.getElementById("messages")
+
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            messages.innerHTML = "Message sent successfully"
+            setTimeout(function() {
+                messages.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
