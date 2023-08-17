@@ -14,20 +14,20 @@
                 <div class="logo">
                     <span><a href="#">Ijeoma.</a></span>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <i class='bx bx-x'></i>
+                <ul id="menubar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class='bx bx-x' onclick="closemenu()"></i>
                 </ul>
-                <i class='bx bx-menu'></i>
+                <i class='bx bx-menu'onclick="openmenu()"></i>
             </nav>
             <div class="hero-text">
                 <p>Front-End Developer</p>
                 <h1>Hi, My name is Anyanwu N Ijeoma, I am based in Nigeria, I design and build user interfaces </h1>
-                <button class="btn">Get in Touch</button>
+                <button class="btn"><a href="#contact">Get in Touch</a></button>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- Section: Services -->
-    <div class="service-contents">
+    <div id="services">
         <h1>Services</h1>
         <div class="card-container">
          <div class="card">
@@ -115,7 +115,7 @@
     </div>
 
     <!-- Section: Portfolio -->
-    <div class="portfolio">
+    <div id="portfolio">
         <div class="container">
             <h1>My Work</h1>
             <div class="work-list">
@@ -151,7 +151,7 @@
     </div>
 
         <!-- Section: Contact -->
-        <div class="contact">
+        <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="side-contact">
@@ -198,6 +198,18 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+    </script>
+
+    <script>
+        var menubar = document.getElementById("menubar");
+
+        function openmenu() {
+            menubar.style.right = "0";
+        }
+
+        function closemenu() {
+            menubar.style.right = "-200px";
+        }
     </script>
 </body>
 </html>
